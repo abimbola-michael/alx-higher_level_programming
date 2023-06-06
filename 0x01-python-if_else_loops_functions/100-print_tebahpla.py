@@ -2,7 +2,7 @@
 j = 0;
 for i in range(ord('z'), ord('a') - 1, -1):
     print("{}".format(chr(i-j)), end="")
-    if i == 0:
+    if j == 0:
         j = 32
     else:
         j = 0
