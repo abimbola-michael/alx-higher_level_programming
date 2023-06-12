@@ -7,4 +7,4 @@ def divisible_by_2(my_list=[]):
             multiplelist.append(True)
         else:
             multiplelist.append(False)
-    return multiple_list
+    return multiplelist
