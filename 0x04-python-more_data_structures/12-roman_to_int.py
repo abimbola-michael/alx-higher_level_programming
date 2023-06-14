@@ -30,5 +30,5 @@ def roman_to_int(roman_string):
                 else:
                     numbers_list.append(roman_list[roman_char])
                     last_roman_number = roman_list[roman_char]
-                number += subtractNumbers(number_list)
+            number += subtractNumbers(number_list)
     return number
