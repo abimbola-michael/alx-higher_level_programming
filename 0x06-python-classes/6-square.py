@@ -4,7 +4,7 @@
 
 class Square:
     """Define a Square"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Instantiation with optional
         Args:
             size (int): size of the square
