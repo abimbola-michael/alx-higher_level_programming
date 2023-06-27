@@ -46,10 +46,12 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Prints # in sauare format"""
+        """Prints # in square format"""
         if self.__size == 0:
             print("")
+        [print("") for h in range(0, self.__position[1])]
         for i in range(0, self.__size):
+            [print(" ", end="") for k in range(0, self.__position[0])]
             for j in range(0, self.__size):
                 print("#", end="")
             print("")
