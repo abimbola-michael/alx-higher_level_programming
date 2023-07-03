@@ -81,7 +81,7 @@ class Rectangle:
 
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
-    def __del__:
+    def __del__(self):
         """Delete representation of the Rectangle class"""
 
         print("Bye rectangle...")
