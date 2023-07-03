@@ -80,3 +80,8 @@ class Rectangle:
         """Representation of the Rectangle class"""
 
         return ("Rectangle({}, {})".format(self.__width, self.__height))
+
+    def __del__:
+        """Delete representation of the Rectangle class"""
+
+        print("Bye rectangle...")
