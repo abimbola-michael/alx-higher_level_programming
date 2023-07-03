@@ -66,8 +66,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
+        print_list = []
+        
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            if i != self.__height - 1:
-                print("")
+            [print_list.append("#") for j in range(self__width)]
+            if i != self.__height:
+                print_list.append("\n")
+        string = "".join(print_list)
+        
+        return string
+
