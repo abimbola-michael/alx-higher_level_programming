@@ -67,12 +67,11 @@ class Rectangle:
             return ""
 
         print_list = []
-        
+
         for i in range(self.__height):
             [print_list.append("#") for j in range(self__width)]
-            if i != self.__height:
+            if i != self.__height - 1:
                 print_list.append("\n")
         string = "".join(print_list)
-        
-        return string
 
+        return string
