@@ -69,7 +69,7 @@ class Rectangle:
         print_list = []
 
         for i in range(self.__height):
-            [print_list.append("#") for j in range(self__width)]
+            [print_list.append("#") for j in range(self.__width)]
             if i != self.__height - 1:
                 print_list.append("\n")
         string = "".join(print_list)
