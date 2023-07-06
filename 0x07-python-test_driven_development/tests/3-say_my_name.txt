@@ -1,0 +1,28 @@
+======================
+say my name
+=======================
+
+
+Importing function:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+Checking with normal case:
+	>>> say_my_name("Abimbola", "Michael")
+	My name is Abimbola Michael
+
+Checking with only one argument:
+	>>> say_my_name("Hotshot")
+	My name is Hotshot
+
+
+Checking with not string data type:
+	>>> say_my_name(4, 5)
+ 	raise TypeError("first_name must be a string")
+	TypeError: first_name must be a string
+
+
+Checking with No argument:
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'

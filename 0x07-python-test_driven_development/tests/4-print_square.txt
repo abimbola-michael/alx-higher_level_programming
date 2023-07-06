@@ -1,0 +1,47 @@
+=========================
+Print square
+=========================
+Importing function:
+	>>> print_square = __import__('4-print_square').print_square
+
+Checking with normal int:
+	>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+
+Checking with float>>> print_square(6.5):
+	Traceback (most recent call last):
+	raise TypeError("size must be an integer")
+	TypeError: size must be an integer
+
+
+Checking with non number: 
+	>>> print_square("Ayo")
+	Traceback (most recent call last):
+  	raise TypeError("size must be an integer")
+	TypeError: size must be an integer
+
+
+Checking with int size less than 0:
+	>>> print_square(-2)
+	Traceback (most recent call last):    
+	raise ValueError("size must be >= 0")
+	ValueError: size must be >= 0
+
+
+Checking with float size  less than 0:
+	>>> print_square(-2.6)
+	Traceback (most recent call last):
+    	raise TypeError("size must be an integer")
+	TypeError: size must be an integer
+
+

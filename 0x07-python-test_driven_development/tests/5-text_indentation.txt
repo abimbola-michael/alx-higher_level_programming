@@ -1,0 +1,76 @@
+===============================
+text_indentation
+===============================
+Importing function:
+	text_indentation = __import__('5-text_indentation').text_indentation
+
+
+
+Checking with normal string with ., ? and ::
+
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+... beatiorem! Iam ruinas videres""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+ Quonam modo?
+
+ Utrum igitur tibi litteram videor an totas paginas commovere?
+
+ Non autem hoc:
+
+ igitur ne illud quidem.
+
+ Fortasse id optimum, sed ubi illud:
+
+ Plus semper voluptatis?
+
+ Teneo, inquit, finem illi videri nihil dolere.
+
+ Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+
+ Si id dicis, vicimus.
+
+ Inde sermone vario sex illa a Dipylo stadia confecimus.
+
+ Sin aliud quid voles, postea.
+
+ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+
+ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+
+
+Checking with empty string: 
+	>>> text_indentation("")
+	""
+
+Checking with non string data type:
+	>>> text_indentation(5)
+ 	raise TypeError("text must be a string")
+	TypeError: text must be a string
+
+
+Checking with string without ., ? and ::
+
+>>> text_indentation("HTML elements and other resources for web-based applications that need to interact with the browser and the DOM (Document Object Model)")
+
+HTML elements and other resources for web-based applications that need to interact with the browser and the DOM (Document Object Model)>>>
+
+Checking with string with spaces at the beginning and the end:
+
+>>> text_indentation("         Make animating widgets a breeze with much less code and many effects built in. In addition, make Text animations beautiful with staggered text effects. transitions, blurs & more      ")
+         Make animating widgets a breeze with much less code and many effects built in.
+
+ In addition, make Text animations beautiful with staggered text effects.
+
+ transitions, blurs & more      >
+
+
+
