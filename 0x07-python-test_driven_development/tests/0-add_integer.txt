@@ -1,0 +1,71 @@
+This defines the ``add_integer`` function
+=======================
+
+Imorting function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Checking doc string
+	>>> a = __import__('0-add_integer').__doc__
+	>>> len(a) > 1
+	True
+
+
+Checking function doc string
+	>>> b = __import__('0-add_integer').add_integer.__doc__
+	>>> len(b) > 1
+	True
+
+
+Checking normal function
+	>>> add_integer(2, 2)
+	4
+
+
+Checking positive and negative:
+	>>> add_integer(3, -4)
+	-1
+
+
+Checking negative and positive:
+	>>> add_integer(-1, 6)
+
+
+
+Checking with floating-point values
+	>>> add_integer(8.0, 3.0)
+	11
+
+
+Checking More float checking
+	>>> add_integer(2.8, 0.1)
+	2
+
+
+Checking Floating and non-floating point values
+	>>> add_integer(3.4, -4)
+	-1
+
+
+Checking with optional second value
+	>>> add_integer(1)
+	99
+
+
+Checking with string as first parameter
+	>>> add_integer("Holla", 5)
+	TypeError: a must be an integer
+
+
+
+Checking with string as second parameter
+        >>> add_integer(8, "World")
+        TypeError: b must be an integer
+
+
+
+Checking with no arg
+        >>> add_integer()
+	TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+
