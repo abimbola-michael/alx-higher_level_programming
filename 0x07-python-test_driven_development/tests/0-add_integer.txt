@@ -1,7 +1,9 @@
-This defines the ``add_integer`` function
-=======================
+================================
+The ``0-add_integer.py`` module
+================================
+Using ``add_integer(a, b=98)``
 
-Imorting function:
+Importing function:
 	>>> add_integer = __import__('0-add_integer').add_integer
 
 
