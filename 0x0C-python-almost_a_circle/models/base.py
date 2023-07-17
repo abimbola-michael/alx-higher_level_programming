@@ -56,13 +56,13 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
 
-        if dictionary and len(dictionary.items) != 0:
+        if dictionary and len(dictionary) != 0:
             if cls.__name__ == "Rectangle":
                 new_cls = cls(3, 3)
             else:
                 new_cls = cls(3)
-            new_cls.update(**dictionary)
-            return new_cls
+            new_cls.update(dictionary)
+        return new_cls
 
     @classmethod
     def load_from_file(cls):
