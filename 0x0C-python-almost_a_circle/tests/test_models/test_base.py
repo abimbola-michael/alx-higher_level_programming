@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Base class Test"""
+"""Base class Test
+
+Unittest classes:
+    TestBase_instatiation - line 12
+"""
 import unittest
 import os
-
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestBase(unittest.TestCase):
+class TestBase_instatiation(unittest.TestCase):
     """Base Class Test"""
 
     def test_no_arg(self):
