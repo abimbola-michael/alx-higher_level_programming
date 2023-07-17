@@ -28,12 +28,12 @@ class TestSqaure(unittest.TestCase):
         sqr2 = Square()
         sqr3 = Square()
 
-        self.assetEqual(sqr1.id, sqr3.id - 2)
+        self.assertEqual(sqr1.id, sqr3.id - 2)
 
     def test_real_id(self):
         sqr = Square(4)
 
-        self.assertEqual(sqr, 4)
+        self.assertEqual(sqr.id, 4)
 
 if __name__ == "__main__":
     unittest.main()

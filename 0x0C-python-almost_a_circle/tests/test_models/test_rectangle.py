@@ -28,12 +28,12 @@ class TestRectangle(unittest.TestCase):
         rect2 = Rectangle()
         rect3 = Rectangle()
 
-        self.assetEqual(rect1.id, rect3.id - 2)
+        self.assertEqual(rect1.id, rect3.id - 2)
 
     def test_real_id(self):
         rect = Rectangle(4)
 
-        self.assertEqual(rect, 4)
+        self.assertEqual(rect.id, 4)
 
 if __name__ == "__main__":
     unittest.main()

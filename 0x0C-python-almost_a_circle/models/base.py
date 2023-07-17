@@ -10,6 +10,7 @@ class Base:
 
     def __init__(self, id=None):
         """Class Initialization"""
+        
         if id is not None:
             self.id = id
         else:
@@ -31,13 +32,13 @@ class Base:
         list_objs to a file"""
 
         filename = cls.__name__ + ".json"
-        with open(filename, "w") as fl
-        if list_objs is None:
-            fl.write("[]")
-        else:
-            list_dictionaries = [obj.to_dictionary() for obj in list_objs]
-            json_string = Base.to_json_string(list_dictionaries)
-            fl.write(json_string)
+        with open(filename, "w") as fl:
+            if list_objs is None:
+                fl.write("[]")
+            else:
+                list_dictionaries = [obj.to_dictionary() for obj in list_objs]
+                json_string = Base.to_json_string(list_dictionaries)
+                fl.write(json_string)
 
     @staticmethod
     def from_json_string(json_string):
@@ -52,7 +53,7 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
 
-        if dictionary and len(dictionary.items) is not 0:
+        if dictionary and len(dictionary.items) != 0:
             if cls.__name__ == "Rectangle":
                 new_cls = cls(3, 3)
             else:
@@ -66,8 +67,8 @@ class Base:
 
         filename = cls.__name__ + ".json"
         try:
-            with open(filename, "r") as fl
-            list_dictionaries = Base.from_json_string(json.read())
+            with open(filename, "r") as fl:
+                list_dictionaries = Base.from_json_string(json.read())
             return [
                     cls.create(dictionary) for dictionary in list_dictionaries
                     ]

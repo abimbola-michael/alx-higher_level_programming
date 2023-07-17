@@ -28,12 +28,12 @@ class TestBase(unittest.TestCase):
         base2 = Base()
         base3 = Base()
 
-        self.assetEqual(base1.id, base3.id - 2)
+        self.assertEqual(base1.id, base3.id - 2)
 
     def test_real_id(self):
         base = Base(4)
 
-        self.assertEqual(base, 4)
+        self.assertEqual(base.id, 4)
 
 if __name__ == "__main__":
     unittest.main()

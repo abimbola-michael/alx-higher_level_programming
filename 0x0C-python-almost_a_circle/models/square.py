@@ -31,7 +31,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """updates the class"""
 
-        if args and len(args) is not 0:
+        if args and len(args) != 0:
             i = 0
             for arg in args:
                 if i == 0:
@@ -49,7 +49,7 @@ class Square(Rectangle):
                     self.y = arg
                 i += 1
 
-        elif kwargs and len(kwargs) is not 0:
+        elif kwargs and len(kwargs) != 0:
             for k, v in kwargs:
                 if k == "id":
                     if arg is None:
