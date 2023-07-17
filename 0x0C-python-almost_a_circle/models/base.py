@@ -4,13 +4,16 @@ import json
 
 
 class Base:
-    """Base class"""
+    """Base class
+    __nb_objects(int):
+        number of class instances
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
         """Class Initialization"""
-        
+
         if id is not None:
             self.id = id
         else:
