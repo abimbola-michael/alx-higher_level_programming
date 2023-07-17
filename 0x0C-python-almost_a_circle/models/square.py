@@ -50,7 +50,7 @@ class Square(Rectangle):
                 i += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs:
+            for k, v in kwargs.items():
                 if k == "id":
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
