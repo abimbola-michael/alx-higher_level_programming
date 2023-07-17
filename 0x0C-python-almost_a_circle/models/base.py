@@ -71,9 +71,9 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as fl:
-                list_dictionaries = Base.from_json_string(json.read())
+                list_dictionaries = Base.from_json_string(fl.read())
             return [
-                    cls.create(dictionary) for dictionary in list_dictionaries
+                    cls.create(**dictionary) for dictionary in list_dictionaries
                     ]
         except IOError:
             return []
