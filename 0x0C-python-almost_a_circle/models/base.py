@@ -73,7 +73,7 @@ class Base:
             with open(filename, "r") as fl:
                 list_dictionaries = Base.from_json_string(fl.read())
             return [
-                    cls.create(**dictionary) for dictionary in list_dictionaries
+                    cls.create(**diction) for diction in list_dictionaries
                     ]
         except IOError:
             return []
