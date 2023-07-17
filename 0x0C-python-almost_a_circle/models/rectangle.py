@@ -130,13 +130,13 @@ class Rectangle(Base):
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = v
-                elif i == "width":
+                elif k == "width":
                     self.width = v
-                elif i == "height":
+                elif k == "height":
                     self.height = v
-                elif i == "x":
+                elif k == "x":
                     self.x = v
-                elif i == "y":
+                elif k == "y":
                     self.y = v
 
     def to_dictionary(self):
