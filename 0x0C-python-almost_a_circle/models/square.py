@@ -3,7 +3,6 @@
 from models.rectangle import Rectangle
 
 
-
 class Square(Rectangle):
     """A square class"""
 
@@ -16,6 +15,7 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.size
                 )
+
     @property
     def size(self):
         """Size getter"""
@@ -74,4 +74,3 @@ class Square(Rectangle):
                 "x": self.x,
                 "y": self.y,
                 }
-

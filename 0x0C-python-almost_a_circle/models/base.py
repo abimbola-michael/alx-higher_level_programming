@@ -7,7 +7,7 @@ class Base:
     """Base class"""
 
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """Class Initialization"""
         if id is not None:

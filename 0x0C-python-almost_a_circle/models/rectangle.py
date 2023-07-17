@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Rectangle Class"""
-Base = __import__('base.py').Base
-
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -19,29 +18,29 @@ class Rectangle(Base):
     @property
     def width(self):
         """Width getter"""
-        
+
         return self.__width
 
     @width.setter
     def width(self, value):
         """width setter"""
-        
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """Height getter"""
-        
+
         return self.__height
 
     @height.setter
     def height(self, value):
         """Height setter"""
-        
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -51,13 +50,13 @@ class Rectangle(Base):
     @property
     def x(self):
         """x getter"""
-        
+
         return self.__x
 
     @x.setter
     def x(self, value):
         """x setter"""
-        
+
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -67,13 +66,13 @@ class Rectangle(Base):
     @property
     def y(self):
         """y getter"""
-        
+
         return self.__y
 
     @y.setter
     def y(self, value):
         """y setter"""
-        
+
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -82,12 +81,12 @@ class Rectangle(Base):
 
     def area(self):
         """Calculates the area of the rectangle"""
-        
+
         return self.width * self.height
 
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
-        
+
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -98,13 +97,15 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """String Representation"""
+
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height
                 )
-    
+
     def update(self, *args, **kwargs):
         """updates the class"""
-        
+
         if args and len(args) is not 0:
             i = 0
             for arg in args:
@@ -122,7 +123,6 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = arg
                 i += 1
-        
         elif kwargs and len(kwargs) is not 0:
             for k, v in kwargs:
                 if k == "id":
@@ -138,6 +138,7 @@ class Rectangle(Base):
                     self.x = v
                 elif i == "y":
                     self.y = v
+
     def to_dictionary(self):
         """Dictionary representation of class"""
 
