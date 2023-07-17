@@ -101,6 +101,50 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height
                 )
+    
+    def update(self, *args, **kwargs):
+        """updates the class"""
+        
+        if args and len(args) is not 0:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+                i += 1
+        
+        elif kwargs and len(kwargs) is not 0:
+            for k, v in kwargs:
+                if k == "id":
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif i == "width":
+                    self.width = v
+                elif i == "height":
+                    self.height = v
+                elif i == "x":
+                    self.x = v
+                elif i == "y":
+                    self.y = v
+    def to_dictionary(self):
+        """Dictionary representation of class"""
 
-
-
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y,
+                }
