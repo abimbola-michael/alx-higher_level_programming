@@ -2,7 +2,7 @@
 
 const firstArg = process.argv[2];
 const size = parseInt(firstArg);
-const x = 'X'
+const x = 'X';
 
 if (isNaN(size)) {
   console.log('Missing size');
