@@ -4,6 +4,9 @@
 
 def add_integer(a, b=98):
     """a function that adds 2 integer
+    a and b must be integers or floats, otherwise
+    raise a TypeError exception with the message a must be
+    an integer or b must be an integer
     Raises:
         TypeError: If either of a or b is a non-integer and a non-float.
     """
