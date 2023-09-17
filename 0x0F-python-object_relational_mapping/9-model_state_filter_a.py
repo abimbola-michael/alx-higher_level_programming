@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-a script that prints the first State object from the
-database hbtn_0e_6_usa
+ a script that lists all State objects that contain the letter
+ a from the database hbtn_0e_6_usa
 """
 
 if __name__ == "__main__":
-    """a script that prints the first State object from
-    the database hbtn_0e_6_usa
+    """ a script that lists all State objects that contain the
+    letter a from the database hbtn_0e_6_usa
     """
 
     from sqlalchemy import create_engine
@@ -26,10 +26,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    state = session.query(State).first()
-    if state is not None:
+    states = session.query(State).filter(State.name.like("%a%"))
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
 
     session.close()
