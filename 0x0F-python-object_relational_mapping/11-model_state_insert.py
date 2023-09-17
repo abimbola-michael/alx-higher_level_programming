@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+
 """
-a script that prints the State object with the name passed as
-argument from the database hbtn_0e_6_usa
+a script that adds the State object “Louisiana” to
+the database hbtn_0e_6_usa
 """
 
 if __name__ == "__main__":
-    """a script that prints the State object with the name passed as
-    argument from the database hbtn_0e_6_usa
+    """a script that adds the State object “Louisiana” to the
+    database hbtn_0e_6_usa
     """
 
     from sqlalchemy import create_engine
@@ -26,10 +27,9 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State).filter(State.name.like(argv[4])).all()
-    if len(states) > 0:
-        print(states[0].id)
-    else:
-        print("Not found")
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    state = session.query(State).filter_by(name="Louisiana").first()
+    print(state.id)
 
-    session.close()
+    session.commit()
