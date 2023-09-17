@@ -5,7 +5,7 @@ from the database hbtn_0e_0_usa"""
 import MySQLdb
 from sys import argv
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     """a script that lists all states with a name starting with N
     """
     con = MySQLdb.connect(
@@ -17,11 +17,11 @@ if __name__ = "__main__":
             )
     crs = con.cursor()
     crs.execute(
-            """SELECT * FROM states WHERE name 
-            LIKE BINARY 'N%' ORDER BY states.id"""
+            """SELECT * FROM states WHERE name
+             LIKE BINARY 'N%' ORDER BY states.id"""
             )
     rows = crs.fetchall()
     for row in rows:
         print(row)
-        crs.close()
-        con.close()
+    crs.close()
+    con.close()
