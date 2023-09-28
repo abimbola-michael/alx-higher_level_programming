@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#script to push to github
+
+git add .
+git commit -m "$1"
+git push origin master
