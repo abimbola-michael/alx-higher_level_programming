@@ -13,6 +13,6 @@ if __name__ == "__main__":
     passwd = sys.argv[2]
     res = requests.get("https://api.github.com/user", auth=(uname, passwd))
     if res.status_code == 200:
-        print(response.get("id"))
+        print(res.json().get("id"))
     else:
-        print("Unable to get data")
+        print("None")
