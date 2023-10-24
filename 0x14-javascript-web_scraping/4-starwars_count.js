@@ -4,7 +4,7 @@
 
 const request = require('request');
 const url = process.argv[2];
-const charId = 18;
+const charId = '18';
 let count = 0;
 
 request.get(url, (error, res, body) => {
