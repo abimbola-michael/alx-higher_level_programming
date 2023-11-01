@@ -1,5 +1,5 @@
 document.readyState(() => {
   $("DIV#red_header").click(() => {
-    $("header").addClass("red");
+    $("header").toggleClass("red green");
   });
 });
